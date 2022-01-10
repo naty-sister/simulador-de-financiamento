@@ -1,0 +1,20 @@
+<app-titulo [title]="titulo" tabindex="3"></app-titulo>
+<main class="container">
+    <mat-card>
+        <mat-card-title tabindex="4">
+            <h3>Conquiste o sonho da casa própria</h3>
+        </mat-card-title>
+        <mat-divider aria-hidden="true"   ></mat-divider>
+        <mat-card-content class="pad-t" tabindex="5">
+            <p>Em apenas alguns passos fique mais perto de<br/>
+            segurar as chaves :)</p>
+        </mat-card-content>
+        <mat-card-actions  tabindex="6" class="centralizar">
+          <button mat-raised-button color="primary" [routerLink]="['/proponente']" title="Simulador Financeiro">Simular financiamento</button>
+        </mat-card-actions>
+    </mat-card>
+  </main>
+
+<footer aria-hidden="true">
+  <img class="logoFooter" src="../../../assets/images/logotipo-footer.png" alt="">
+</footer>

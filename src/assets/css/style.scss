@@ -1,0 +1,64 @@
+.toolbar{
+  h1{
+      color: #fff;
+      margin-left: 20px;
+  }
+}
+mat-toolbar{
+  background-color: #6200EE;
+}
+.container{
+  width: 96%;
+  margin:0 auto;
+}
+.titulo{
+    font-size: 25px;
+    padding: 15px 0;
+}
+
+mat-card{
+  padding-bottom: 5%;
+}
+mat-divider{
+  width: 96% !important;
+  margin: 0 2% !important;
+}
+mat-card-title{
+
+}
+mat-card-title,
+mat-card-content
+{
+  display: flex;
+  justify-content: center;
+  padding: 1% 0;
+  text-align: center;
+}
+
+.mat-form-field{
+  width: 32%;
+  margin: 10px 0.5%;
+}
+mat-card-actions{
+  width: 99%;
+  margin: 1.5% auto 0 !important;
+}
+.between{
+  display: flex !important;
+  justify-content: space-between;
+}
+/* PADDING TOP*/
+.pad-t{
+  padding-top: 2%;
+}
+button{
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.logoFooter {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}

@@ -1,0 +1,27 @@
+<app-titulo [title]="titulo" tabindex="3"></app-titulo>
+
+<main class="container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title tabindex="4">
+                <h2>Proposta Nº 00001</h2>
+                <img aria-hidden="true" src="../../../../assets/images/aprovado.png" alt=""><br>
+                <p class="status">STATUS: APROVADO</p>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider aria-hidden="true"></mat-divider>
+        <mat-card-content tabindex="5">
+            <ul>
+                <li>Taxa de 8% ao ano para correntistas</li>
+                <li>Taxa de 10% ao ano para não correntistas</li>
+                <li>Parcela inicial {{parcela | currency:'BRL'}}</li>
+                <li>Valor total aprovado {{valorTotal | currency:'BRL'}}</li>
+                <li>Seguro Só Vamu Security.</li>
+                <li>Desconto na primeira e última parcela</li>
+            </ul>
+        </mat-card-content>
+        <mat-card-actions tabindex="6">
+             <button mat-raised-button color="primary" [routerLink]="['/']">IR PARA A TELA INICIAL</button>
+         </mat-card-actions>
+    </mat-card>
+</main>

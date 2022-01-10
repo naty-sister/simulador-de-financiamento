@@ -1,0 +1,28 @@
+<app-titulo [title]="titulo" tabindex="3"></app-titulo>
+<main class="container">
+<mat-card>
+    <mat-card-header>
+        <mat-card-title tabindex="4">
+            <h3>Proposta Nº 00001</h3>
+            <img  aria-hidden="true" src="../../../../assets/images/reprovado.png" alt="Icone de status reprovado"><br>
+            <p class="status">STATUS: REPROVADO</p>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-divider aria-hidden="true"></mat-divider>
+    <mat-card-content tabindex="5">
+                <p class="feedback">
+                    Infelizmente não foi possível aprovar seu financiamento.<br>
+                    Não desanime, reunimos algumas dicas que podem ajudar na sua próxima simulação:
+                </p>
+                <ul>
+                    <li> Mantenha seu CPF em dia e sem restrições</li>
+                    <li>Dados de endereço, e-mail, telefone sempre atualizados.</li>
+                    <li>Melhore seu relacionamento com o banco, movimentando sua conta</li>
+                </ul>
+    </mat-card-content>
+    <mat-card-actions tabindex="5">
+         <button mat-raised-button color="primary" [routerLink]="['/']">IR PARA A TELA INICIAL</button>
+     </mat-card-actions>
+</mat-card>
+
+</main>
