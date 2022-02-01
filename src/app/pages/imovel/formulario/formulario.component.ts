@@ -63,7 +63,7 @@ export class FormularioComponent implements OnInit {
     console.log(valorEntrada);
   }
 
-  validarNumero(){
+  validarParcelas(){
     let NumeroParcelas = this.imoveisForm.controls['parcelas'].value;
     if(NumeroParcelas > 360){
       this.validarNumeroParcelas = true;
@@ -72,18 +72,18 @@ export class FormularioComponent implements OnInit {
     }
   }
 
-  private getValueEntrada(){
+  private pegarValorEntrada(){
     let valorEntrada = this.imoveisForm.controls['valorEntrada'].value;
     return parseFloat(valorEntrada);
   }
 
-  private getValueImovel(){
+  private pegarValorImovel(){
     let valorImovel = this.imoveisForm.controls['imoveis'].value;
     return parseFloat(valorImovel);
   }
 
   private totalAprovado(){
-     let totalAprovado = this.getValueImovel() - this.getValueEntrada();
+     let totalAprovado = this.pegarValorImovel() - this.pegarValorEntrada();
     return totalAprovado;
   }
 
@@ -96,8 +96,8 @@ export class FormularioComponent implements OnInit {
   }
 
   onSubmit() {
-    this.getValueEntrada();
-    this.getValueImovel();
+    this.pegarValorEntrada();
+    this.pegarValorImovel();
     this.totalAprovado();
     this.rendaMinima();
 
@@ -108,7 +108,7 @@ export class FormularioComponent implements OnInit {
     this.controlDataService.getInstallments(this.parcelas);
     this.controlDataService.getAmount(this.valorTotal)
 
-    if ( this.getValueEntrada() < this.getValueImovel()*0.2 ){
+    if ( this.pegarValorEntrada() < this.pegarValorImovel()*0.2 ){
       this._snackBar.open(
         "O valor da entrada deve ser maior que 20% do valor do imóvel", "OK",
       {
@@ -116,7 +116,7 @@ export class FormularioComponent implements OnInit {
         horizontalPosition: "right",
         verticalPosition: "bottom",
       })
-    } else if (this.getValueEntrada() > this.getValueImovel()) {
+    } else if (this.pegarValorEntrada() > this.pegarValorImovel()) {
       this._snackBar.open("O valor da entrada deve ser menor que o valor do imóvel", "OK",
     {
         duration: 5000,

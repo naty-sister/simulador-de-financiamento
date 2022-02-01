@@ -36,7 +36,7 @@
 
                 <mat-form-field hideRequiredMarker appearance="outline">
                     <mat-label>Em quantas parcelas deseja parcelar</mat-label>
-                    <input type="number" min="1" max="360" formControlName="parcelas" matInput required  (blur)="validarNumero()">
+                    <input type="number" min="1" max="360" formControlName="parcelas" matInput required  (blur)="validarParcelas()">
                     <mat-hint *ngIf="validarNumeroParcelas != true">Preencha com no máximo 360 parcelas</mat-hint><br>
                     <mat-error *ngIf="imoveisForm.get('parcelas').errors?.required">Preencha com no máximo 360 parcelas</mat-error>
                     <mat-hint *ngIf="validarNumeroParcelas === true">
