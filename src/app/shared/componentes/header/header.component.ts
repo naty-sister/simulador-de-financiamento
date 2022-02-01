@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  logo: string = '../../../assets/images/logotipo.png';
   constructor(
     private router: Router,) { }
 

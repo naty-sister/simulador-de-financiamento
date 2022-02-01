@@ -1,35 +1,30 @@
+import { DebugElement } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './shared/componentes/header/header.component';
 
 describe('AppComponent', () => {
+  let de: DebugElement;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterTestingModule, MatToolbarModule],
+      declarations: [AppComponent, HeaderComponent],
     }).compileComponents();
   });
-
-  it('should create the app', () => {
+  it("should create the app", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'simulador-financeiro'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('simulador-financeiro');
-  });
-
-  it('should render title', () => {
+  it("deve verificar se existe o componente header ", () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('simulador-financeiro app is running!');
+    de = fixture.debugElement.query(By.css("app-header"));
+    expect(de.nativeElement).toBeDefined();
   });
 });
