@@ -42,4 +42,11 @@ describe('HeaderComponent', () => {
     el = de.nativeElement;
     expect(el.textContent).toContain('Simulador de financiamentos');
   });
+
+  it('Deve verificar goHome ', () => {
+    const spy = spyOn(component, 'goHome');
+    el = fixture.debugElement.query(By.css("a")).nativeElement;
+    el.click();
+    expect(component.goHome()).toHaveBeenCalledTimes(1);
+  });
 });
